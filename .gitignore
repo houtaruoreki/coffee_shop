@@ -1,4 +1,4 @@
-.env
+
 admin/node_modules
 backend/venv
 backend/*/__pycache__
