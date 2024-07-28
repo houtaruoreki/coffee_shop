@@ -6,15 +6,12 @@ class IngredientSerializer(serializers.ModelSerializer):
         model = Ingredient
         fields = '__all__'
 
-class CoffeeSerializer(serializers.ModelSerializer)
+class CoffeeSerializer(serializers.ModelSerializer):
     total_price = serializers.SerializerMethodField()
-    
+
     class Meta:
         model = Coffee
-        fields = ["id", "title", "ingredients","description", "total_price"]
+        fields = ['id', 'title', 'ingredients', 'description', 'total_price']
 
-    def get_total_price(self,obj):
+    def get_total_price(self, obj):
         return obj.total_price
-        
-
-    
